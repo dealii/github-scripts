@@ -6,6 +6,9 @@ Collection of scripts exploring and using the Github API for the development and
 
 Github needs credentials to log in, but for obvious reasons, we do not want to put our passwords into this repository. Therefore, after cloning, a file `login.py` must be created in the root directory. An example for the contents of this file is
 ```
-git = Github("user", "password")
+from github import Github
+def login():
+    git = Github("user","password")
+    return git
 ```
 Any ssh based alternative is highly appreciated.
