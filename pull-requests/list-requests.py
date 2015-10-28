@@ -12,6 +12,8 @@ r = g.get_repo("dealii/dealii")
 for p in r.get_pulls():
   print p.title
   print "    ", p.created_at
+  print "    ", p.head.label, "->", p.base.label
+  print "    ", p.html_url
   if (p.milestone):
     print "    ", p.milestone.title
 
